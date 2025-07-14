@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .category-button {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+
+        .category-button:hover {
+            color: goldenrod;
+        }
+
+        .carousel-item>div {
+            display: flex;
+            justify-content: center;
+        }
+       .product-link {
+  text-decoration: none;
+}
+
+.product-link p,
+.product-link span {
+  color: black;
+  transition: color 0.3s;
+}
+
+.product-link:hover p,
+.product-link:hover span {
+  color: #ff9900 !important;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white p-2">
+            <div class="container-fluid m-2">
+                <a class="navbar-brand" href="#"><img src="img/p2.png" width="150" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <form class="d-flex m-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <img src="img/phone.svg" height="35" class="m-4" width="35" alt="">
+                    <div>
+                        <span>Order to call</span><br>
+                        <span style="color: red;">01791216579</span>
+                    </div><br>
+                    <i class="fa-solid fa-bag-shopping" style="margin-left: 10px;"></i>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- slider -->
+    <div class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/p1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/p1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/p1.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- swip line-->
+
+    <!-- Carousel Start -->
+    <div class="container">
+        <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div>
+                        <button class="category-button m-2">Trendy Earrings</button>
+                        <button class="category-button m-2">Pendant Necklace</button>
+                        <button class="category-button m-2">Necklace Set</button>
+                        <button class="category-button m-2">Offer Products</button>
+                        <button class="category-button m-2">All Earrings Collection</button>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div>
+                        <button class="category-button m-2">Offer Products</button>
+                        <button class="category-button m-2">All Earrings Collection</button>
+                        <button class="category-button m-2">More Items</button>
+                        <button class="category-button m-2">Pendant Necklace</button>
+                        <button class="category-button m-2">Necklace Set</button>
+                        <button class="category-button m-2">Necklace Set</button>
+                    </div>
+                </div>
+
+                <!--Slide 3-->
+                <div class="carousel-item">
+                    <div>
+                        <button class="category-button m-2">Hoop Earrings</button>
+                        <button class="category-button m-2">Jhumka</button>
+                        <button class="category-button m-2">New Arrivals</button>
+                        <button class="category-button m-2">Offer Products</button>
+                        <button class="category-button m-2">All Earrings Collection</button>
+                        <button class="category-button m-2">Necklace Set</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- product-->
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>All <span style="color: goldenrod;">Products</span></h1>
+        <a href="all-products.html" class="btn btn-outline-success">See More</a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/j1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/j2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+
+<!-- product row 1 -->
+        <div class="d-flex justify-content-between align-items-center mb-3 m-4">
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i4.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+        
+<!-- product row 2 -->
+        <div class="d-flex justify-content-between align-items-center mb-3 m-4">
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i4.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+                
+<!-- product row 3 -->
+        <div class="d-flex justify-content-between align-items-center mb-3 m-4">
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i4.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+                
+<!-- product row 4 -->
+        <div class="d-flex justify-content-between align-items-center mb-3 m-4">
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i4.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+                
+<!-- product row 5-->
+        <div class="d-flex justify-content-between align-items-center mb-3 m-4">
+        </div>
+        <div class="row row-cols-1 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i1.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                 <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i2.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i3.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i4.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="position-relative" style="width: 200px;">
+                           <a href="product.html" class="product-link" style="text-decoration: none; color: black;"> <img src="img/i5.jpg" alt="Product" class="img-fluid rounded">
+                             <p class="card-text ">Geometric Tassel Pendant 18k Gold Plated Necklace-413 <br>
+
+                            <span style="color: red;">৳550</span> <del>৳ 890</del>
+                            </p>
+                            <span
+                                class="position-absolute top-0 start-0 bg-danger text-white fw-bold px-2 py-1 rounded m-2"
+                                style="font-size: 14px;">
+                                -38%
+                            </span>
+                           
+                        </div>
+                        <button type="submit" style="background-color: goldenrod; color: white; border: none; width: 100%;" >Order now</button>
+                         </a>
+                </div>
+            </div>
+        </div>
+        <!-- pageination  -->
+    <div class="container p-5">
+              <nav aria-label="Page navigation example">
+       <ul class="pagination" style="display: flex; justify-content: center;">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+    </div>
+    <!-- footer -->
+
+  <footer style="background-color: goldenrod; color: white; text-align: center; width: 100%; margin: 0; padding: 15px 0;">
+  Designed and Developed by TechJodo.
+</footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html> 
